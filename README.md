@@ -14,29 +14,27 @@ Sebuah alat sederhana untuk mengunduh konten (video/gambar) dari berbagai platfo
 1. **Clone repositori ini:**
    ```bash
    git clone https://github.com/username-anda/media-sosial-downloader.git
-Masuk ke direktori proyek:
-
-bash
-Copy
-cd media-sosial-downloader
+**Masuk ke direktori proyek:**
+- bash
+- Copy
+- cd media-sosial-downloader
 Install dependencies:
+- bash
+- Copy
+- pip install -r requirements.txt
+**Jalankan program:**
+- bash
+- Copy
+- python main.py
 
-bash
-Copy
-pip install -r requirements.txt
-Jalankan program:
-
-bash
-Copy
-python main.py
-📸 Cara Penggunaan
+**📸 Cara Penggunaan**
 Salin tautan (URL) konten yang ingin diunduh dari media sosial.
 
 Jalankan program dan tempelkan tautan saat diminta.
 
 Konten akan diunduh ke folder downloads/.
 
-🤝 Berkontribusi
+**🤝 Berkontribusi**
 Anda bisa berkontribusi dengan:
 
 Melaporkan bug 🐛 di Issues.
@@ -45,7 +43,7 @@ Memberi saran fitur 💡.
 
 Fork & buat Pull Request (PR).
 
-💰 Donasi
+**💰 Donasi**
 Proyek ini dikembangkan secara independen dan masih merintis. Jika alat ini bermanfaat, pertimbangkan untuk donasi agar saya bisa terus mengembangkannya:
 
 Trakteer: Link Trakteer Anda
