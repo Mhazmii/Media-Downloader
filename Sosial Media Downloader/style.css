@@ -1,0 +1,320 @@
+:root {
+    --primary: #00f0ff;
+    --secondary: #0072ff;
+    --dark: #0a0a1a;
+    --darker: #050510;
+    --light: #f0f0f0;
+    --gray: #444;
+}
+
+/* ========== Reset & Base ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--dark);
+    color: var(--light);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ========== Header ========== */
+header {
+    background-color: rgba(10, 10, 26, 0.9);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 242, 255, 0.2);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.8rem;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.logo i {
+    font-size: 2rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size: 1.1rem;
+    position: relative;
+    color: var(--light);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a:hover::after {
+    color: var(--primary);
+    width: 100%;
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--light);
+    cursor: pointer;
+}
+
+/* ========== Hero ========== */
+.hero {
+    padding: 180px 0 100px;
+    text-align: center;
+    background: linear-gradient(135deg, var(--darker), var(--dark));
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;base64,...');
+    opacity: 0.1;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(0, 242, 255, 0.3);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: #ccc;
+}
+
+/* ========== Platform Icons ========== */
+.platform-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.platform-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.platform-icon i {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.platform-icon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 242, 255, 0.2);
+}
+
+.youtube { background: linear-gradient(45deg, #FF0000, #FF5E5E); }
+.tiktok { background: linear-gradient(45deg, #00F2EA, #FF0050); }
+.instagram { background: linear-gradient(45deg, #833AB4, #E1306C, #FCAF45); }
+.twitter { background: linear-gradient(45deg, #1DA1F2, #0D8ECF); }
+.facebook { background: linear-gradient(45deg, #1877F2, #0A5F9E); }
+
+/* ========== Input & Button Styling ========== */
+#video-url {
+    padding: 15px;
+    width: 100%;
+    max-width: 600px;
+    border: 2px solid #0072ff;
+    border-radius: 5px;
+    background: #1a1a1a;
+    color: #fff;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+#video-url:focus {
+    border-color: #00f0ff;
+    outline: none;
+}
+
+#fetch-btn {
+    padding: 12px 25px;
+    background-color: #00f0ff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+#fetch-btn:hover {
+    background-color: #0072ff;
+}
+
+/* ========== Button Styling ========== */
+.btn {
+    padding: 12px 30px;
+    background: linear-gradient(45deg, var(--secondary), var(--primary));
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    box-shadow: 0 15px 30px rgba(0, 242, 255, 0.2);
+    transform: translateY(-4px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* ========== Spinner ========== */
+.spinner {
+    display: none;
+    width: 40px;
+    height: 40px;
+    margin: 20px auto;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 4px solid var(--primary);
+    animation: spin 1s linear infinite;
+}
+
+/* ========== Animations ========== */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: var(--darker);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        transition: left 0.3s;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .platform-icons {
+        gap: 15px;
+    }
+
+    .platform-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .url-input {
+        flex-direction: column;
+    }
+
+    .step {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .step::after {
+        left: 25px;
+        top: 65px;
+        height: calc(100% - 30px);
+    }
+}
